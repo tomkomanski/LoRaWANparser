@@ -1,17 +1,29 @@
 ﻿using System;
 using LoRaWANparser.MClimateCO2Display.Enums;
 using LoRaWANparser.MClimateCO2Display.Models;
+using LoRaWANparser.MClimateCO2Display.Parsers.Interfaces;
 using LoRaWANparser.Tools;
 
 namespace LoRaWANparser.MClimateCO2Display.Parsers
 {
-    internal sealed class PIRcheckPeriod
+    internal sealed class PIRcheckPeriod : IPartialParser
     {
-        public PIRcheckPeriod()
+        private static PIRcheckPeriod? instance;
+
+        public static PIRcheckPeriod GetParser()
+        {
+            if (instance == null)
+            {
+                instance = new PIRcheckPeriod();
+            }
+            return instance;
+        }
+
+        private PIRcheckPeriod()
         {
         }
 
-        public ParsedData PIRcheckPeriodProcess(IEnumerable<Byte> dataBytes)
+        public ParsedData Process(IEnumerable<Byte> dataBytes)
         {
             ParsedData parsedData = new();
 

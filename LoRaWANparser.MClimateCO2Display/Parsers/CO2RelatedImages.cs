@@ -1,17 +1,29 @@
 ﻿using System;
 using LoRaWANparser.MClimateCO2Display.Enums;
 using LoRaWANparser.MClimateCO2Display.Models;
+using LoRaWANparser.MClimateCO2Display.Parsers.Interfaces;
 using LoRaWANparser.Tools;
 
 namespace LoRaWANparser.MClimateCO2Display.Parsers
 {
-    internal sealed class CO2RelatedImages
+    internal sealed class CO2RelatedImages : IPartialParser
     {
-        public CO2RelatedImages()
+        private static CO2RelatedImages? instance;
+
+        public static CO2RelatedImages GetParser()
+        {
+            if (instance == null)
+            {
+                instance = new CO2RelatedImages();
+            }
+            return instance;
+        }
+
+        private CO2RelatedImages()
         {
         }
 
-        public ParsedData CO2RelatedImagesProcess(IEnumerable<Byte> dataBytes)
+        public ParsedData Process(IEnumerable<Byte> dataBytes)
         {
             ParsedData parsedData = new();
 

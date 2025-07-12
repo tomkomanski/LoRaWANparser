@@ -1,17 +1,29 @@
 ﻿using System;
 using LoRaWANparser.MClimateCO2.Enums;
 using LoRaWANparser.MClimateCO2.Models;
+using LoRaWANparser.MClimateCO2.Parsers.Interfaces;
 using LoRaWANparser.Tools;
 
 namespace LoRaWANparser.MClimateCO2.Parsers
 {
-    internal sealed class LedNotificationConfiguration
+    internal sealed class LedNotificationConfiguration : IPartialParser
     {
-        public LedNotificationConfiguration()
+        private static LedNotificationConfiguration? instance;
+
+        public static LedNotificationConfiguration GetParser()
+        {
+            if (instance == null)
+            {
+                instance = new LedNotificationConfiguration();
+            }
+            return instance;
+        }
+
+        private LedNotificationConfiguration()
         {
         }
 
-        public ParsedData LedNotificationConfigurationProcess(IEnumerable<Byte> dataBytes)
+        public ParsedData Process(IEnumerable<Byte> dataBytes)
         {
             ParsedData parsedData = new();
 

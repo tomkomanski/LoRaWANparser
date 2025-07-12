@@ -1,17 +1,29 @@
 ﻿using System;
 using LoRaWANparser.MClimateCO2.Enums;
 using LoRaWANparser.MClimateCO2.Models;
+using LoRaWANparser.MClimateCO2.Parsers.Interfaces;
 using LoRaWANparser.Tools;
 
 namespace LoRaWANparser.MClimateCO2.Parsers
 {
-    internal sealed class HardwareAndSoftware
+    internal sealed class HardwareAndSoftware : IPartialParser
     {
-        public HardwareAndSoftware()
+        private static HardwareAndSoftware? instance;
+
+        public static HardwareAndSoftware GetParser()
+        {
+            if (instance == null)
+            {
+                instance = new HardwareAndSoftware();
+            }
+            return instance;
+        }
+
+        private HardwareAndSoftware()
         {
         }
 
-        public ParsedData HardwareAndSoftwareProcess(IEnumerable<Byte> dataBytes)
+        public ParsedData Process(IEnumerable<Byte> dataBytes)
         {
             ParsedData parsedData = new();
 

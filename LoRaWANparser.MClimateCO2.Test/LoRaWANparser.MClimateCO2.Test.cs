@@ -30,7 +30,7 @@ namespace LoRaWANparser.MClimateCO2.Test
             Double value4 = 3384;
             String unit4 = "mV";
 
-            Parser parser = new();
+            IParser parser = new Parser();
             ParsedData parsedData = parser.Process(frame);
 
             Assert.IsTrue(parsedData.Reading.Count() == 4);
@@ -82,7 +82,7 @@ namespace LoRaWANparser.MClimateCO2.Test
             Double value4 = 3624;
             String unit4 = "mV";
 
-            Parser parser = new();
+            IParser parser = new Parser();
             ParsedData parsedData = parser.Process(frame);
 
             Assert.IsTrue(parsedData.Reading.Count() == 4);
@@ -122,7 +122,7 @@ namespace LoRaWANparser.MClimateCO2.Test
             Double value1 = 9.00;
             String unit1 = "min";
 
-            Parser parser = new();
+            IParser parser = new Parser();
             ParsedData parsedData = parser.Process(frame);
 
             Assert.IsTrue(parsedData.Reading.Count() == 1);
@@ -151,7 +151,7 @@ namespace LoRaWANparser.MClimateCO2.Test
             String value2 = "1.1";
             String unit2 = "";
 
-            Parser parser = new();
+            IParser parser = new Parser();
             ParsedData parsedData = parser.Process(frame);
 
             Assert.IsTrue(parsedData.Reading.Count() == 2);
@@ -181,7 +181,7 @@ namespace LoRaWANparser.MClimateCO2.Test
             Double value1 = 16.50;
             String unit1 = "min";
 
-            Parser parser = new();
+            IParser parser = new Parser();
             ParsedData parsedData = parser.Process(frame);
 
             Assert.IsTrue(parsedData.Reading.Count() == 1);
@@ -206,7 +206,7 @@ namespace LoRaWANparser.MClimateCO2.Test
             String value1 = "Device operates with unconfirmed uplinks";
             String unit1 = "";
 
-            Parser parser = new();
+            IParser parser = new Parser();
             ParsedData parsedData = parser.Process(frame);
 
             Assert.IsTrue(parsedData.Reading.Count() == 1);
@@ -235,7 +235,7 @@ namespace LoRaWANparser.MClimateCO2.Test
             Double value2 = 9.00;
             String unit2 = "";
 
-            Parser parser = new();
+            IParser parser = new Parser();
             ParsedData parsedData = parser.Process(frame);
 
             Assert.IsTrue(parsedData.Reading.Count() == 2);
@@ -269,7 +269,7 @@ namespace LoRaWANparser.MClimateCO2.Test
             Double value2 = 1500;
             String unit2 = "ppm";
 
-            Parser parser = new();
+            IParser parser = new Parser();
             ParsedData parsedData = parser.Process(frame);
 
             Assert.IsTrue(parsedData.Reading.Count() == 2);
@@ -299,7 +299,7 @@ namespace LoRaWANparser.MClimateCO2.Test
             Double value1 = 545.00;
             String unit1 = "ppm";
 
-            Parser parser = new();
+            IParser parser = new Parser();
             ParsedData parsedData = parser.Process(frame);
 
             Assert.IsTrue(parsedData.Reading.Count() == 1);
@@ -332,7 +332,7 @@ namespace LoRaWANparser.MClimateCO2.Test
             Double value3 = 12.00;
             String unit3 = "min";
 
-            Parser parser = new();
+            IParser parser = new Parser();
             ParsedData parsedData = parser.Process(frame);
 
             Assert.IsTrue(parsedData.Reading.Count() == 3);
@@ -375,7 +375,7 @@ namespace LoRaWANparser.MClimateCO2.Test
             Double value3 = 11.00;
             String unit3 = "min";
 
-            Parser parser = new();
+            IParser parser = new Parser();
             ParsedData parsedData = parser.Process(frame);
 
             Assert.IsTrue(parsedData.Reading.Count() == 3);
@@ -442,7 +442,7 @@ namespace LoRaWANparser.MClimateCO2.Test
             Double value9 = 800.00;
             String unit9 = "ms";
 
-            Parser parser = new();
+            IParser parser = new Parser();
             ParsedData parsedData = parser.Process(frame);
 
             Assert.IsTrue(parsedData.Reading.Count() == 9);
@@ -551,7 +551,7 @@ namespace LoRaWANparser.MClimateCO2.Test
             Double value12 = 4020.00;
             String unit12 = "ms";
 
-            Parser parser = new();
+            IParser parser = new Parser();
             ParsedData parsedData = parser.Process(frame);
 
             Assert.IsTrue(parsedData.Reading.Count() == 12);
@@ -631,7 +631,7 @@ namespace LoRaWANparser.MClimateCO2.Test
             Double value1 = 72.00;
             String unit1 = "h";
 
-            Parser parser = new();
+            IParser parser = new Parser();
             ParsedData parsedData = parser.Process(frame);
 
             Assert.IsTrue(parsedData.Reading.Count() == 1);
@@ -768,7 +768,7 @@ namespace LoRaWANparser.MClimateCO2.Test
             Double value29 = 3552;
             String unit29 = "mV";
 
-            Parser parser = new();
+            IParser parser = new Parser();
             ParsedData parsedData = parser.Process(frame);
 
             Assert.IsTrue(parsedData.Reading.Count() == 29);

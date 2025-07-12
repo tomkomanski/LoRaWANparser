@@ -1,17 +1,29 @@
 ﻿using System;
 using LoRaWANparser.MClimateCO2.Enums;
 using LoRaWANparser.MClimateCO2.Models;
+using LoRaWANparser.MClimateCO2.Parsers.Interfaces;
 using LoRaWANparser.Tools;
 
 namespace LoRaWANparser.MClimateCO2.Parsers
 {
-    internal sealed class KeepAlive
+    internal sealed class KeepAlive : IPartialParser
     {
-        public KeepAlive()
+        private static KeepAlive? instance;
+
+        public static KeepAlive GetParser()
+        {
+            if (instance == null)
+            {
+                instance = new KeepAlive();
+            }
+            return instance;
+        }
+
+        private KeepAlive()
         {
         }
 
-        public ParsedData KeepAliveProcess(IEnumerable<Byte> dataBytes)
+        public ParsedData Process(IEnumerable<Byte> dataBytes)
         {
             ParsedData parsedData = new();
 

@@ -1,17 +1,29 @@
 ﻿using System;
 using LoRaWANparser.MClimateCO2.Enums;
 using LoRaWANparser.MClimateCO2.Models;
+using LoRaWANparser.MClimateCO2.Parsers.Interfaces;
 using LoRaWANparser.Tools;
 
 namespace LoRaWANparser.MClimateCO2.Parsers
 {
-    internal sealed class BuzzerNotificationConfiguration
+    internal sealed class BuzzerNotificationConfiguration : IPartialParser
     {
-        public BuzzerNotificationConfiguration()
+        private static BuzzerNotificationConfiguration? instance;
+
+        public static BuzzerNotificationConfiguration GetParser()
+        {
+            if (instance == null)
+            {
+                instance = new BuzzerNotificationConfiguration();
+            }
+            return instance;
+        }
+
+        private BuzzerNotificationConfiguration()
         {
         }
 
-        public ParsedData BuzzerNotificationConfigurationProcess(IEnumerable<Byte> dataBytes)
+        public ParsedData Process(IEnumerable<Byte> dataBytes)
         {
             ParsedData parsedData = new();
 

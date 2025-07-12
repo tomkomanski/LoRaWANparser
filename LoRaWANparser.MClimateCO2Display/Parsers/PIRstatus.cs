@@ -1,17 +1,29 @@
 ﻿using System;
 using LoRaWANparser.MClimateCO2Display.Enums;
 using LoRaWANparser.MClimateCO2Display.Models;
+using LoRaWANparser.MClimateCO2Display.Parsers.Interfaces;
 using LoRaWANparser.Tools;
 
 namespace LoRaWANparser.MClimateCO2Display.Parsers
 {
-    internal sealed class PIRstatus
+    internal sealed class PIRstatus : IPartialParser
     {
-        public PIRstatus()
+        private static PIRstatus? instance;
+
+        public static PIRstatus GetParser()
+        {
+            if (instance == null)
+            {
+                instance = new PIRstatus();
+            }
+            return instance;
+        }
+
+        private PIRstatus()
         {
         }
 
-        public ParsedData PIRstatusProcess(IEnumerable<Byte> dataBytes)
+        public ParsedData Process(IEnumerable<Byte> dataBytes)
         {
             ParsedData parsedData = new();
 

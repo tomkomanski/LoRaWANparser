@@ -1,17 +1,29 @@
 ﻿using System;
 using LoRaWANparser.MClimateCO2.Enums;
 using LoRaWANparser.MClimateCO2.Models;
+using LoRaWANparser.MClimateCO2.Parsers.Interfaces;
 using LoRaWANparser.Tools;
 
 namespace LoRaWANparser.MClimateCO2.Parsers
 {
-    internal sealed class NetworkJoinRetryPeriod
+    internal sealed class NetworkJoinRetryPeriod : IPartialParser
     {
-        public NetworkJoinRetryPeriod()
+        private static NetworkJoinRetryPeriod? instance;
+
+        public static NetworkJoinRetryPeriod GetParser()
+        {
+            if (instance == null)
+            {
+                instance = new NetworkJoinRetryPeriod();
+            }
+            return instance;
+        }
+
+        private NetworkJoinRetryPeriod()
         {
         }
 
-        public ParsedData NetworkJoinRetryPeriodProcess(IEnumerable<Byte> dataBytes)
+        public ParsedData Process(IEnumerable<Byte> dataBytes)
         {
             ParsedData parsedData = new();
 

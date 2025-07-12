@@ -1,17 +1,29 @@
 ﻿using System;
 using LoRaWANparser.MClimateCO2Display.Enums;
 using LoRaWANparser.MClimateCO2Display.Models;
+using LoRaWANparser.MClimateCO2Display.Parsers.Interfaces;
 using LoRaWANparser.Tools;
 
 namespace LoRaWANparser.MClimateCO2Display.Parsers
 {
-    internal sealed class MeasuredHumidity
+    internal sealed class MeasuredHumidity : IPartialParser
     {
-        public MeasuredHumidity()
+        private static MeasuredHumidity? instance;
+
+        public static MeasuredHumidity GetParser()
+        {
+            if (instance == null)
+            {
+                instance = new MeasuredHumidity();
+            }
+            return instance;
+        }
+
+        private MeasuredHumidity()
         {
         }
 
-        public ParsedData MeasuredHumidityProcess(IEnumerable<Byte> dataBytes)
+        public ParsedData Process(IEnumerable<Byte> dataBytes)
         {
             ParsedData parsedData = new();
 

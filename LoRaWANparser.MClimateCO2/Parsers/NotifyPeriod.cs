@@ -1,17 +1,29 @@
 ﻿using System;
 using LoRaWANparser.MClimateCO2.Enums;
 using LoRaWANparser.MClimateCO2.Models;
+using LoRaWANparser.MClimateCO2.Parsers.Interfaces;
 using LoRaWANparser.Tools;
 
 namespace LoRaWANparser.MClimateCO2.Parsers
 {
-    internal sealed class NotifyPeriod
+    internal sealed class NotifyPeriod : IPartialParser
     {
-        public NotifyPeriod()
+        private static NotifyPeriod? instance;
+
+        public static NotifyPeriod GetParser()
+        {
+            if (instance == null)
+            {
+                instance = new NotifyPeriod();
+            }
+            return instance;
+        }
+
+        private NotifyPeriod()
         {
         }
 
-        public ParsedData NotifyPeriodProcess(IEnumerable<Byte> dataBytes)
+        public ParsedData Process(IEnumerable<Byte> dataBytes)
         {
             ParsedData parsedData = new();
 

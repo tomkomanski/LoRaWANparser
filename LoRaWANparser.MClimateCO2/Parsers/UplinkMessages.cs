@@ -1,17 +1,29 @@
 ﻿using System;
 using LoRaWANparser.MClimateCO2.Enums;
 using LoRaWANparser.MClimateCO2.Models;
+using LoRaWANparser.MClimateCO2.Parsers.Interfaces;
 using LoRaWANparser.Tools;
 
 namespace LoRaWANparser.MClimateCO2.Parsers
 {
-    internal sealed class UplinkMessages
+    internal sealed class UplinkMessages : IPartialParser
     {
-        public UplinkMessages()
+        private static UplinkMessages? instance;
+
+        public static UplinkMessages GetParser()
+        {
+            if (instance == null)
+            {
+                instance = new UplinkMessages();
+            }
+            return instance;
+        }
+
+        private UplinkMessages()
         {
         }
 
-        public ParsedData UplinkMessagesProcess(IEnumerable<byte> dataBytes)
+        public ParsedData Process(IEnumerable<byte> dataBytes)
         {
             ParsedData parsedData = new();
 

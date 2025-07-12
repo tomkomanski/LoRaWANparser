@@ -1,17 +1,29 @@
 ﻿using System;
 using LoRaWANparser.MClimateCO2Display.Enums;
 using LoRaWANparser.MClimateCO2Display.Models;
+using LoRaWANparser.MClimateCO2Display.Parsers.Interfaces;
 using LoRaWANparser.Tools;
 
 namespace LoRaWANparser.MClimateCO2Display.Parsers
 {
-    internal sealed class RadioCommunicationWatchDog
+    internal sealed class RadioCommunicationWatchDog : IPartialParser
     {
-        public RadioCommunicationWatchDog() 
-        { 
+        private static RadioCommunicationWatchDog? instance;
+
+        public static RadioCommunicationWatchDog GetParser()
+        {
+            if (instance == null)
+            {
+                instance = new RadioCommunicationWatchDog();
+            }
+            return instance;
         }
 
-        public ParsedData RadioCommunicationWatchDogProcess(IEnumerable<Byte> dataBytes)
+        private RadioCommunicationWatchDog()
+        {
+        }
+
+        public ParsedData Process(IEnumerable<Byte> dataBytes)
         {
             ParsedData parsedData = new();
 

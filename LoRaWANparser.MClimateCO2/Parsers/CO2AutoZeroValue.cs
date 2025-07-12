@@ -1,17 +1,29 @@
 ﻿using System;
 using LoRaWANparser.MClimateCO2.Enums;
 using LoRaWANparser.MClimateCO2.Models;
+using LoRaWANparser.MClimateCO2.Parsers.Interfaces;
 using LoRaWANparser.Tools;
 
 namespace LoRaWANparser.MClimateCO2.Parsers
 {
-    internal sealed class CO2AutoZeroValue
+    internal sealed class CO2AutoZeroValue : IPartialParser
     {
-        public CO2AutoZeroValue()
+        private static CO2AutoZeroValue? instance;
+
+        public static CO2AutoZeroValue GetParser()
+        {
+            if (instance == null)
+            {
+                instance = new CO2AutoZeroValue();
+            }
+            return instance;
+        }
+
+        private CO2AutoZeroValue()
         {
         }
 
-        public ParsedData CO2AutoZeroValueProcess(IEnumerable<Byte> dataBytes)
+        public ParsedData Process(IEnumerable<Byte> dataBytes)
         {
             ParsedData parsedData = new();
 

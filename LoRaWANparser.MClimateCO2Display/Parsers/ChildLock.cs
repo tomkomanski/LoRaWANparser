@@ -1,17 +1,29 @@
 ﻿using System;
 using LoRaWANparser.MClimateCO2Display.Enums;
 using LoRaWANparser.MClimateCO2Display.Models;
+using LoRaWANparser.MClimateCO2Display.Parsers.Interfaces;
 using LoRaWANparser.Tools;
 
 namespace LoRaWANparser.MClimateCO2Display.Parsers
 {
-    internal sealed class ChildLock
+    internal sealed class ChildLock : IPartialParser
     {
-        public ChildLock()
+        private static ChildLock? instance;
+
+        public static ChildLock GetParser()
+        {
+            if (instance == null)
+            {
+                instance = new ChildLock();
+            }
+            return instance;
+        }
+
+        private ChildLock()
         {
         }
 
-        public ParsedData ChildLockProcess(IEnumerable<Byte> dataBytes)
+        public ParsedData Process(IEnumerable<Byte> dataBytes)
         {
             ParsedData parsedData = new();
 

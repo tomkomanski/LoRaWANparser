@@ -1,17 +1,29 @@
 ﻿using System;
 using LoRaWANparser.MClimateCO2Display.Enums;
 using LoRaWANparser.MClimateCO2Display.Models;
+using LoRaWANparser.MClimateCO2Display.Parsers.Interfaces;
 using LoRaWANparser.Tools;
 
 namespace LoRaWANparser.MClimateCO2Display.Parsers
 {
-    internal sealed class CO2BoundaryLevels
+    internal sealed class CO2BoundaryLevels : IPartialParser
     {
-        public CO2BoundaryLevels()
+        private static CO2BoundaryLevels? instance;
+
+        public static CO2BoundaryLevels GetParser()
+        {
+            if (instance == null)
+            {
+                instance = new CO2BoundaryLevels();
+            }
+            return instance;
+        }
+
+        private CO2BoundaryLevels()
         {
         }
 
-        public ParsedData CO2BoundaryLevelsProcess(IEnumerable<Byte> dataBytes)
+        public ParsedData Process(IEnumerable<Byte> dataBytes)
         {
             ParsedData parsedData = new();
 

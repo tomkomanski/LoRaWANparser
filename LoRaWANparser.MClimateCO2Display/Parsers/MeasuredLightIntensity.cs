@@ -1,17 +1,29 @@
 ﻿using System;
 using LoRaWANparser.MClimateCO2Display.Enums;
 using LoRaWANparser.MClimateCO2Display.Models;
+using LoRaWANparser.MClimateCO2Display.Parsers.Interfaces;
 using LoRaWANparser.Tools;
 
 namespace LoRaWANparser.MClimateCO2Display.Parsers
 {
-    internal sealed class MeasuredLightIntensity
+    internal sealed class MeasuredLightIntensity : IPartialParser
     {
-        public MeasuredLightIntensity()
+        private static MeasuredLightIntensity? instance;
+
+        public static MeasuredLightIntensity GetParser()
+        {
+            if (instance == null)
+            {
+                instance = new MeasuredLightIntensity();
+            }
+            return instance;
+        }
+
+        private MeasuredLightIntensity()
         {
         }
 
-        public ParsedData MeasuredLightIntensityProcess(IEnumerable<Byte> dataBytes)
+        public ParsedData Process(IEnumerable<Byte> dataBytes)
         {
             ParsedData parsedData = new();
 

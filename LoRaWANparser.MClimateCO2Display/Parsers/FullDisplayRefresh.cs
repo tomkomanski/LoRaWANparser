@@ -1,17 +1,29 @@
 ﻿using System;
 using LoRaWANparser.MClimateCO2Display.Enums;
 using LoRaWANparser.MClimateCO2Display.Models;
+using LoRaWANparser.MClimateCO2Display.Parsers.Interfaces;
 using LoRaWANparser.Tools;
 
 namespace LoRaWANparser.MClimateCO2Display.Parsers
 {
-    internal sealed class FullDisplayRefresh
+    internal sealed class FullDisplayRefresh : IPartialParser
     {
-        public FullDisplayRefresh()
+        private static FullDisplayRefresh? instance;
+
+        public static FullDisplayRefresh GetParser()
+        {
+            if (instance == null)
+            {
+                instance = new FullDisplayRefresh();
+            }
+            return instance;
+        }
+
+        private FullDisplayRefresh()
         {
         }
 
-        public ParsedData FullDisplayRefreshProcess(IEnumerable<Byte> dataBytes)
+        public ParsedData Process(IEnumerable<Byte> dataBytes)
         {
             ParsedData parsedData = new();
 

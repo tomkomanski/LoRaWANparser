@@ -6,7 +6,7 @@ using LoRaWANparser.Tools;
 
 String frame = "21-00-52-01-02-3A-6C-0A-66-CD-08-00-0A-00";
 
-Parser parser = new();
+IParser parser = new Parser();
 ParsedData parsedData = parser.Process(frame);
 
 String parserErrorCodeString = String.Empty;
