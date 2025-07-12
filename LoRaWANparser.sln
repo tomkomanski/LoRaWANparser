@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36301.6 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoRaWANparser.MClimateCO2", "LoRaWANparser.MClimateCO2\LoRaWANparser.MClimateCO2.csproj", "{ECE33D09-A80E-4C89-A061-A25E3D639507}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoRaWANparser.Tools", "LoRaWANparser.Tools\LoRaWANparser.Tools.csproj", "{01316BAA-99E5-4B9C-AB71-B0D7F2A6F7A0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoRaWANparser.MClimateCO2.Trigger", "LoRaWANparser.MClimateCO2.Trigger\LoRaWANparser.MClimateCO2.Trigger.csproj", "{E7E57838-7C56-4ED7-911A-5260FDCBBE9D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoRaWANparser.MClimateCO2.Test", "LoRaWANparser.MClimateCO2.Test\LoRaWANparser.MClimateCO2.Test.csproj", "{8FFCAEBA-DB51-4BFE-8E32-00A8054FA3B2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ECE33D09-A80E-4C89-A061-A25E3D639507}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ECE33D09-A80E-4C89-A061-A25E3D639507}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ECE33D09-A80E-4C89-A061-A25E3D639507}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ECE33D09-A80E-4C89-A061-A25E3D639507}.Release|Any CPU.Build.0 = Release|Any CPU
+		{01316BAA-99E5-4B9C-AB71-B0D7F2A6F7A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01316BAA-99E5-4B9C-AB71-B0D7F2A6F7A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01316BAA-99E5-4B9C-AB71-B0D7F2A6F7A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01316BAA-99E5-4B9C-AB71-B0D7F2A6F7A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E7E57838-7C56-4ED7-911A-5260FDCBBE9D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E7E57838-7C56-4ED7-911A-5260FDCBBE9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E7E57838-7C56-4ED7-911A-5260FDCBBE9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E7E57838-7C56-4ED7-911A-5260FDCBBE9D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8FFCAEBA-DB51-4BFE-8E32-00A8054FA3B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8FFCAEBA-DB51-4BFE-8E32-00A8054FA3B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8FFCAEBA-DB51-4BFE-8E32-00A8054FA3B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8FFCAEBA-DB51-4BFE-8E32-00A8054FA3B2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {473DE70A-CF82-4DD0-BAD9-701EA629CF80}
+	EndGlobalSection
+EndGlobal
