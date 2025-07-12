@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.36301.6 d17.14
+VisualStudioVersion = 17.14.36301.6
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoRaWANparser.MClimateCO2", "LoRaWANparser.MClimateCO2\LoRaWANparser.MClimateCO2.csproj", "{ECE33D09-A80E-4C89-A061-A25E3D639507}"
 EndProject
@@ -10,6 +10,12 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoRaWANparser.MClimateCO2.Trigger", "LoRaWANparser.MClimateCO2.Trigger\LoRaWANparser.MClimateCO2.Trigger.csproj", "{E7E57838-7C56-4ED7-911A-5260FDCBBE9D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoRaWANparser.MClimateCO2.Test", "LoRaWANparser.MClimateCO2.Test\LoRaWANparser.MClimateCO2.Test.csproj", "{8FFCAEBA-DB51-4BFE-8E32-00A8054FA3B2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoRaWANparser.MClimateCO2Display", "LoRaWANparser.MClimateCO2Display\LoRaWANparser.MClimateCO2Display.csproj", "{4AB19919-1167-41D2-9733-E92AE7F9816D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoRaWANparser.MClimateCO2Display.Trigger", "LoRaWANparser.MClimateCO2Display.Trigger\LoRaWANparser.MClimateCO2Display.Trigger.csproj", "{47516B73-FFF2-454B-9E10-EA887D6C46F4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoRaWANparser.MClimateCO2Display.Test", "LoRaWANparser.MClimateCO2Display.Test\LoRaWANparser.MClimateCO2Display.Test.csproj", "{E8C72C66-B8AC-4307-A273-4105F736ECF7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +39,18 @@ Global
 		{8FFCAEBA-DB51-4BFE-8E32-00A8054FA3B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8FFCAEBA-DB51-4BFE-8E32-00A8054FA3B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8FFCAEBA-DB51-4BFE-8E32-00A8054FA3B2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4AB19919-1167-41D2-9733-E92AE7F9816D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4AB19919-1167-41D2-9733-E92AE7F9816D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4AB19919-1167-41D2-9733-E92AE7F9816D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4AB19919-1167-41D2-9733-E92AE7F9816D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{47516B73-FFF2-454B-9E10-EA887D6C46F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47516B73-FFF2-454B-9E10-EA887D6C46F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47516B73-FFF2-454B-9E10-EA887D6C46F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47516B73-FFF2-454B-9E10-EA887D6C46F4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E8C72C66-B8AC-4307-A273-4105F736ECF7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E8C72C66-B8AC-4307-A273-4105F736ECF7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E8C72C66-B8AC-4307-A273-4105F736ECF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E8C72C66-B8AC-4307-A273-4105F736ECF7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
