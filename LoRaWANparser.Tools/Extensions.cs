@@ -93,5 +93,45 @@ namespace LoRaWANparser.Tools
 
             return val;
         }
+
+        public static Byte[] CalculateCrc16(this IEnumerable<Byte> data)
+        {
+            Byte[] crc = new Byte[2];
+
+            if (data != null && data.Any())
+            {
+                Byte[] dataByte = data.ToArray();
+                Int32 poly = 0x3D65;
+                Int32 crcVal = 0x0000;
+                Int32 xorValue = 0xFFFF;
+                Int32 i;
+
+                foreach (Byte b in dataByte)
+                {
+                    for (i = 0x80; i != 0; i >>= 1)
+                    {
+                        if ((crcVal & 0x8000) != 0)
+                        {
+                            crcVal = crcVal << 1 ^ poly;
+                        }
+                        else
+                        {
+                            crcVal = crcVal << 1;
+                        }
+                        if ((b & i) != 0)
+                        {
+                            crcVal ^= poly;
+                        }
+                    }
+                }
+
+                Byte[] tmpCrc = BitConverter.GetBytes(crcVal & 0xffff ^ xorValue);
+
+                crc[0] = tmpCrc[1];
+                crc[1] = tmpCrc[0];
+            }
+
+            return crc;
+        }
     }
 }

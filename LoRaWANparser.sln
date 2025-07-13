@@ -29,6 +29,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoRaWANparser.ApatorInvonic
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoRaWANparser.ApatorInvonic2.Test", "LoRaWANparser.ApatorInvonic2.Test\LoRaWANparser.ApatorInvonic2.Test.csproj", "{AE1DF71C-97EC-4CF9-B583-7E9AB2158B16}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoRaWANparser.ApatorUltrimis", "LoRaWANparser.ApatorUltrimis\LoRaWANparser.ApatorUltrimis.csproj", "{0046EC1D-875E-4A63-910B-EFC610F1A3A8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoRaWANparser.ApatorUltrimis.Trigger", "LoRaWANparser.ApatorUltrimis.Trigger\LoRaWANparser.ApatorUltrimis.Trigger.csproj", "{197524F8-8DEF-425B-BD37-03572D382B7F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoRaWANparser.ApatorUltrimis.Test", "LoRaWANparser.ApatorUltrimis.Test\LoRaWANparser.ApatorUltrimis.Test.csproj", "{EEA893CA-8727-4BDD-A69C-506A87C6CED0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -87,6 +93,18 @@ Global
 		{AE1DF71C-97EC-4CF9-B583-7E9AB2158B16}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AE1DF71C-97EC-4CF9-B583-7E9AB2158B16}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AE1DF71C-97EC-4CF9-B583-7E9AB2158B16}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0046EC1D-875E-4A63-910B-EFC610F1A3A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0046EC1D-875E-4A63-910B-EFC610F1A3A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0046EC1D-875E-4A63-910B-EFC610F1A3A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0046EC1D-875E-4A63-910B-EFC610F1A3A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{197524F8-8DEF-425B-BD37-03572D382B7F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{197524F8-8DEF-425B-BD37-03572D382B7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{197524F8-8DEF-425B-BD37-03572D382B7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{197524F8-8DEF-425B-BD37-03572D382B7F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EEA893CA-8727-4BDD-A69C-506A87C6CED0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EEA893CA-8727-4BDD-A69C-506A87C6CED0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EEA893CA-8727-4BDD-A69C-506A87C6CED0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EEA893CA-8727-4BDD-A69C-506A87C6CED0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
