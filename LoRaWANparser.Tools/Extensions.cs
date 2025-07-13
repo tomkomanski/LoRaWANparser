@@ -66,5 +66,32 @@ namespace LoRaWANparser.Tools
 
             return input;
         }
+
+        public static DateTime UnixTimeStampToDateTime(this Int64 unixTimeStamp)
+        {
+            DateTime dateTime = new DateTime(1970, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc);
+            dateTime = dateTime.AddSeconds(unixTimeStamp);
+            return dateTime;
+        }
+
+        public static Int64 BCDToInt64(this IEnumerable<Byte> data)
+        {
+            Int64 val = 0;
+
+            if (data != null && data.Any())
+            {
+                Byte[] dataBytes = data.ToArray();
+
+                Int32 length = dataBytes.Count();
+
+                for (Int32 i = length; i > 0; i--)
+                {
+                    val = val * 10 + (dataBytes[i - 1] >> 4 & 0xF);
+                    val = val * 10 + (dataBytes[i - 1] & 0xF);
+                }
+            }
+
+            return val;
+        }
     }
 }

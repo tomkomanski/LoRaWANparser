@@ -23,6 +23,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoRaWANparser.MClimateHT.Te
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoRaWANparser.MClimateHT.Trigger", "LoRaWANparser.MClimateHT.Trigger\LoRaWANparser.MClimateHT.Trigger.csproj", "{283030C0-E3A2-4B76-801F-B698AE58772E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoRaWANparser.ApatorInvonic2", "LoRaWANparser.ApatorInvonic2\LoRaWANparser.ApatorInvonic2.csproj", "{D93CAEE7-CA37-4845-8DCC-2BBF3563085B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoRaWANparser.ApatorInvonic2.Trigger", "LoRaWANparser.ApatorInvonic2.Trigger\LoRaWANparser.ApatorInvonic2.Trigger.csproj", "{04AA92CA-682A-45A4-A04F-D5032552B6A2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoRaWANparser.ApatorInvonic2.Test", "LoRaWANparser.ApatorInvonic2.Test\LoRaWANparser.ApatorInvonic2.Test.csproj", "{AE1DF71C-97EC-4CF9-B583-7E9AB2158B16}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,6 +75,18 @@ Global
 		{283030C0-E3A2-4B76-801F-B698AE58772E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{283030C0-E3A2-4B76-801F-B698AE58772E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{283030C0-E3A2-4B76-801F-B698AE58772E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D93CAEE7-CA37-4845-8DCC-2BBF3563085B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D93CAEE7-CA37-4845-8DCC-2BBF3563085B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D93CAEE7-CA37-4845-8DCC-2BBF3563085B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D93CAEE7-CA37-4845-8DCC-2BBF3563085B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{04AA92CA-682A-45A4-A04F-D5032552B6A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04AA92CA-682A-45A4-A04F-D5032552B6A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04AA92CA-682A-45A4-A04F-D5032552B6A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04AA92CA-682A-45A4-A04F-D5032552B6A2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE1DF71C-97EC-4CF9-B583-7E9AB2158B16}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE1DF71C-97EC-4CF9-B583-7E9AB2158B16}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE1DF71C-97EC-4CF9-B583-7E9AB2158B16}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE1DF71C-97EC-4CF9-B583-7E9AB2158B16}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
